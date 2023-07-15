@@ -9,7 +9,7 @@ import { AddnewbookForm } from './components/AddnewbookForm';
 import { Singlebook } from './components/Singlebook';
 import { LendedBooks } from './components/LendedBooks';
 import { Members } from './components/Members';
-
+import { Navigate } from 'react-router-dom';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
 <>
 <Header/>
 <Routes>
-
+<Route path='/' element={<Navigate replace to="/dashboard"/>}  />
 <Route path='/dashboard' element={<Dashboard />}/>
 <Route path='/newuser' element={<NewUserForm/>}/>
 <Route path='/issuebook' element={<NewBookIssueForm/>}/>
